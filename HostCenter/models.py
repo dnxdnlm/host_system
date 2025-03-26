@@ -44,16 +44,6 @@ class Host(models.Model):
         return f"{self.name} ({self.ip_address})"
 
 
-class HostPingLog(models.Model):
-    host = models.ForeignKey(Host, on_delete=models.CASCADE)
-    is_reachable = models.BooleanField()
-    response_time = models.FloatField(null=True, blank=True)
-    checked_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.host} - {'Reachable' if self.is_reachable else 'Unreachable'}"
-
-
 class DailyHostStats(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     data_center = models.ForeignKey(DataCenter, on_delete=models.CASCADE)

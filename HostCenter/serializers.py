@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import City, DataCenter, Host, HostPingLog, DailyHostStats
+from .models import City, DataCenter, Host, DailyHostStats
 
 
 class CitySerializer(serializers.ModelSerializer):
@@ -34,10 +34,6 @@ class HostSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class HostPingLogSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = HostPingLog
-        fields = '__all__'
 
 
 class DailyHostStatsSerializer(serializers.ModelSerializer):

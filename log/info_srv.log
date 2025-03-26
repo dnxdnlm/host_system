@@ -1,0 +1,17 @@
+2025-03-26 19:26:36.163 INFO autoreload.py:668 1334716: Watching for file changes with StatReloader
+2025-03-26 19:59:57.787 WARNING log.py:241 1334716: Bad Request: /api/hosts/
+2025-03-26 20:01:22.963 WARNING log.py:241 1334716: Bad Request: /api/cities/
+2025-03-26 20:01:55.781 WARNING log.py:241 1334716: Method Not Allowed: /api/cities/
+2025-03-26 20:02:08.856 WARNING log.py:241 1334716: Method Not Allowed: /api/cities/
+2025-03-26 20:08:50.219 ERROR log.py:241 1334716: Internal Server Error: /api/datacenters/1
+Traceback (most recent call last):
+  File "E:\miniconda3\envs\host_admin_system\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\miniconda3\envs\host_admin_system\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "E:\miniconda3\envs\host_admin_system\lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "E:\miniconda3\envs\host_admin_system\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8010/api/datacenters/1/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2025-03-26 20:11:19.997 WARNING log.py:241 1334716: Request Timeout: /api/hosts/1/ping/
